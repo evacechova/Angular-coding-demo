@@ -1,0 +1,40 @@
+//vw breakpoints for media queries
+$mq-md: 1060px;
+
+//color variables
+$c-bcg-primary: #ffffff;
+$c-text-primary: #33272b;
+$c-text-secondary: #a49fa1;
+$c-text-unactive: #493f42;
+$c-text-brand: #3772ff;
+$c-divider: #d2cfd0;
+$c-brand-600: #2c5bcc;
+$c-brand-500: #3772ff;
+$c-brand-400: #5f8eff;
+$c-brand-100: #d7e3ff;
+
+//font variables
+$f-h1: 2.25em;
+$f-h3: 1.3125em;
+//unused rn -> $f-md: 1em;
+$f-sm: 0.875em;
+$f-xsm: 0.75em;
+//unused rn -> $f-primary: 400;
+$f-bold: 700;
+
+//spacing of elements/components
+$spc-md: 1.5em;
+$spc-sm: 0.75em;
+$spc-xsm: 0.625em;
+
+//padding
+$p-md: 1em;
+$p-sm: 0.5em;
+
+//border-radius
+$r-lg: 2.25em;
+$r-md: 1em;
+$r-sm: 0.375em;
+
+//transition effects
+$trans: all 300ms;

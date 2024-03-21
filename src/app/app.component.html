@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div class="header">
+    <h1 class="welcome-msg">Good morning, {{ username }}</h1>
+
+    <!--create reservation button-->
+    <app-create-reservation-btn></app-create-reservation-btn>
+  </div>
+
+  <div class="p-wrapper">
+    <p>
+      You have <strong> {{ reservationArray.length }} reservations </strong>
+    </p>
+    <img
+      class="info-icon"
+      src="https://github.com/evacechova/Angular-demo-images/blob/main/images/info-icon.png?raw=true"
+      alt="Info icon"
+    />
+    <p>planned for today.</p>
+  </div>
+
+  <!--reservation card list-->
+  <div class="rc__list">
+    <app-reservation-card
+      *ngFor="let reservation of reservationArray"
+      [reservationData]="reservation"
+    ></app-reservation-card>
+  </div>
+
+  <!--divider-->
+  <div class="divider"></div>
+
+  <!--menu-->
+  <app-menu></app-menu>
+
+  <!--availability list-->
+  <div class="availability__list">
+    <app-availability-list-entry></app-availability-list-entry>
+    <app-availability-list-entry></app-availability-list-entry>
+    <app-availability-list-entry></app-availability-list-entry>
+    <app-availability-list-entry></app-availability-list-entry>
+  </div>
+</div>

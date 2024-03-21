@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.rc {
+  margin-inline: auto;
+  min-width: fit-content;
+  min-height: fit-content;
+  border-radius: $r-md;
+  box-shadow: 0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15);
+  padding: $p-md;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, minmax(fit-content, auto));
+  row-gap: $spc-sm;
+
+  &__main-content {
+    display: flex;
+    gap: $spc-sm;
+    align-items: center;
+
+    h3.reservation-details {
+      font-size: $f-h3;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    gap: $spc-xsm;
+    justify-self: center;
+    padding: $p-sm;
+    background-color: $c-bcg-primary;
+    border: none;
+    text-transform: uppercase;
+    font-weight: $f-bold;
+
+    .btn__text {
+      color: $c-brand-500;
+    }
+
+    &:is(:hover, :active, :focus) {
+      cursor: pointer;
+    }
+  }
+}

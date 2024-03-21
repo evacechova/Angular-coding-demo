@@ -1,0 +1,20 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.menu {
+  display: flex;
+  gap: $spc-sm;
+
+  &__tab {
+    padding: $p-sm;
+    border-radius: $r-lg;
+    transition: $trans;
+
+    &:is(:hover, :focus, :active) {
+      background-color: $c-brand-100;
+      color: $c-brand-500;
+      text-shadow: 0.5px 0 0 currentColor;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'variables';
+
+//media query mixins
+@mixin medium-screen {
+  @media screen and (min-width: $mq-md) {
+    @content;
+  }
+}
+
+//layout specific mixins
+@mixin grid-rows {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(1em, 1fr));
+}
+
+@mixin grid-columns {
+  grid-template-columns: repeat(auto-fit, minmax(1em, 1fr));
+  grid-template-rows: 1fr;
+}

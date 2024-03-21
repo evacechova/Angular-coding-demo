@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.cr__btn {
+  display: flex;
+  gap: $spc-xsm;
+  padding: $p-md;
+  border: none;
+  border-radius: $r-md;
+  background: linear-gradient(to right, $c-brand-600, $c-brand-500);
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    display: block;
+    background: linear-gradient(to left, $c-brand-600, $c-brand-500);
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: $trans;
+  }
+
+  &:is(:hover, :focus, :active) {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .cr-btn__text {
+    text-transform: uppercase;
+    color: $c-bcg-primary;
+    letter-spacing: 0.2em;
+    font-weight: $f-bold;
+    text-align: left;
+  }
+
+  .cr-btn__icon {
+    align-self: center;
+  }
+}
